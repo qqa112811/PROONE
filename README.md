@@ -34,15 +34,5 @@ software is programmed to do something illegal! If you wish to use this
 software, please do so in a controlled environment safely isolated from the
 Internet.
 
-## Index
-Where to go from here
-
-* [User Guide](doc/user_guide.md)
-* [Software Design Spec](doc/sws.md)
-* [Implementation Note](doc/impl.md)
-* [Heartbeat Protocol Spec](doc/htbt.md)
-* [Proone Data Format Spec](doc/fmts.md)
-* [Dev Notes](doc/dev_notes.md)
-
 ## Subprojects
 * proone-xcomp: Infrastructure for building and testing cross-compiled builds (TODO)
