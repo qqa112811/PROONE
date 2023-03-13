@@ -3,8 +3,6 @@
 with MMU. It features self-contained breaking and entering, replicating, IPv6
 support and CNC using DNS over TLS.
 
-Copyright (c) 2019-2022 David Timber &lt;dxdt@dev.snart.me&gt;
-
 ## Foreword
 In a nutshell, this project is a reengineered version of Mirai, but in a serious
 tone and with some extras. Inspired by the work of original authors of Mirai,
@@ -48,7 +46,3 @@ Where to go from here
 
 ## Subprojects
 * proone-xcomp: Infrastructure for building and testing cross-compiled builds (TODO)
-
-## Read Also
-* https://scholarship.law.tamu.edu/lawreview/vol3/iss3/9/
-* https://www.duo.uio.no/bitstream/handle/10852/22917/JeremyxLundex-xUiO-Thesis.pdf?sequence=1
