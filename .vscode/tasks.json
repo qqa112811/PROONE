@@ -1,0 +1,91 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Prep AM",
+			"type": "shell",
+			"command": "./bootstrap.sh"
+		},
+		{
+			"label": "Autoconf",
+			"type": "shell",
+			"dependsOn": [ "Prep AM" ],
+			"command": "./configure --enable-debug"
+		},
+		{
+			"label": "clean",
+			"type": "shell",
+			"command": "make clean"
+		},
+		{
+			"label": "distclean",
+			"type": "shell",
+			"command": "make distclean"
+		},
+
+		{
+			"label": "Build htbthost",
+			"type": "shell",
+			"command": "make -C ./src proone-htbthost"
+		},
+		{
+			"label": "Build htbtclient",
+			"type": "shell",
+			"command": "make -C ./src proone-htbtclient"
+		},
+		{
+			"label": "Build resolv",
+			"type": "shell",
+			"command": "make -C ./src proone-resolv"
+		},
+		{
+			"label": "Build pack",
+			"type": "shell",
+			"command": "make -C ./src dvault.bin proone-pack"
+		},
+		{
+			"label": "Build rnd",
+			"type": "shell",
+			"command": "make -C ./src proone-rnd"
+		},
+		{
+			"label": "Build recon",
+			"type": "shell",
+			"command": "make -C ./src proone-recon"
+		},
+		{
+			"label": "Build mkcdict",
+			"type": "shell",
+			"command": "make -C ./src proone-mkcdict"
+		},
+		{
+			"label": "Build bne",
+			"type": "shell",
+			"command": "make -C ./src proone-mkcdict proone-bne && ./src/proone-mkcdict ./src/data/cred_dict.txt ./src/data/cred_dict.bin"
+		},
+		{
+			"label": "Build hostinfod",
+			"type": "shell",
+			"command": "make -C ./src proone-hostinfod"
+		},
+		{
+			"label": "Build proone",
+			"type": "shell",
+			"command": "make -C ./src proone"
+		},
+		{
+			"label": "Build yamlls",
+			"type": "shell",
+			"command": "make -C ./src proone-yamlls"
+		},
+
+
+		{
+			"label": "Build test_proto",
+			"type": "shell",
+			"command": "make -C ./src proone-test_proto"
+		}
+	]
+}
